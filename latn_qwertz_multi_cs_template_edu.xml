@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file defines the QWERTY layout.
+
+A layout is made of keys arranged into rows. Keys can be made bigger with the
+'width' attribute and blank space can be added on the left of a key with the
+'shift' attribute.
+
+'key0' assigns the symbol on the middle of the key. 'key1', 'key2', etc..
+assign symbols to the corners of a key, they are arranged like this:
+
+  1 7 2
+  5 0 6
+  3 8 4
+
+Keys prefixed with 'loc ' are not visible on the keyboard. They are used to
+specify a place for a key, if it needed to be added to the layout later.
+(for example, by the "Add keys to keyboard" option)
+
+See bottom_row.xml for the definition of the bottom row and neo2.xml for a
+layout that re-defines it.
+See srcs/juloo.keyboard2/KeyValue.java for the keys that have a special meaning.
+-->
+<keyboard name="myVeryOriginalLayout" script="latin">
+    <modmap>
+    <shift a="~" b="≈"/>
+    <shift a="=" b="≠"/>
+    <shift a="@home" b="I'll let you know when I'll arive home."/>
+	<fn a="@home" b="atHome"/>
+    </modmap>
+
+	<row height="0.6">
+		<key key0="" />
+        <key key0="🏢" key1="🚌" key2="🚅" key3="🚗" key4="🕛" /> <!--redund: 🕛-->
+        <key key0="" />
+		<key key0="" />
+		<key key0="" />
+		<key key0="" />
+		<key key0="" />
+		<key key0="" />
+		<key key0="" />
+		<key key0="" />
+		<key key0="" />
+		<key key0="" />
+    </row>
+    <row height="0.9">
+        <key key0="q" key1="1" key4="esc" />
+        <key key0="w" key1="2" key3="~" />
+        <key key0="e" key1="3" key2="é" key3="ë" key4="ě" />
+        <key key0="r" key1="4" key2="ŕ" key3="" key4="ř" />
+        <key key0="t" key1="5" key3="°" key4="ť" />
+        <key key0="z" key1="6" key3="^" key4="ž" />
+        <key key0="u" key1="7" key2="ú" key3="ü" key4="ů" />
+        <key key0="i" key1="8" key2="í" key3="ï" key4="*" />
+        <key key0="o" key1="9" key2="ó" key3="ö" key4="ô" />
+        <key key0="p" key1="0" key2="=" key3="/" key4="§" />
+    </row>
+    <row height="0.9">
+        <key shift="0.5" key0="a" key1="tab" key2="á" key3="ä" key4="α" />
+        <key key0="s" key1="{" key2="&lt;" key3="$" key4="š" />
+        <key key0="d" key1="$" key2="δ" key3="°" key4="ď" />
+        <key key0="f" key1="}" key2=">" key3="ѳ" key4="φ" />
+        <key key0="g" key1="»" key2="«" key4="_" />
+        <key key0="h" key1="[" key2="(" />
+        <key key0="j" key1="+" key2="\?" key3="!" key4="-" />
+        <key key0="k" key1="]" key2=")" key3="`" key4="" />
+        <key key0="l" key1="|" key2="ľ" key3="\\" key4="π" />
+    </row>
+    <row height="0.9">
+        <key width="1.5" key0="shift" key2="loc capslock" />
+        <key key0="y" key2="ý" key3="÷" />
+        <key key0="x" key2="·" key3="×" key4="loc †" />
+        <key key0="c" key1="γ" key2="" key3="&amp;" key4="č" />
+        <key key0="v" key2="" key3="\@" key4="paste" />
+        <key key0="b" key1="♭" key2=";" key3=":" key4="β" />
+        <key key0="n" key1="∞" key2="," key3="." key4="ň" />
+        <key key0="m" key1="%" key2="&quot;" key3="'" key4="\#" />
+        <key width="1.5" key0="backspace" key3="switch_numeric" key2="delete" />
+    </row>
+</keyboard>
